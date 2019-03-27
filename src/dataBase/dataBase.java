@@ -15,6 +15,7 @@ public class dataBase {
         try {
             //abrimos el archivo si es posible
             File tienda = new File("");
+            System.out.println("Se abrio el archivo");
             fr = new FileReader(tienda);
             br = new BufferedReader(fr);
 
