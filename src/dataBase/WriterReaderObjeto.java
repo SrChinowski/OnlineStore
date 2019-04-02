@@ -1,6 +1,8 @@
 package dataBase;
 import javax.swing.*;
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class WriterReaderObjeto {
 
@@ -98,14 +100,16 @@ public class WriterReaderObjeto {
             FileInputStream fi = new FileInputStream(new File("objetos.txt"));
             ObjectInputStream oi = new ObjectInputStream(fi);
 
-            System.out.println("\nLista de objetos:\n");
-            Objetos nobj =(Objetos) oi.readObject();
-            while (nobj !=  null) {
+            List<Objetos> Objetos = new ArrayList<>();     int i=0;
+            System.out.println("\n\tLista de objetos:\n");
+            //Objetos nobj =(Objetos) oi.readObject();
+            while (fi.available()>0) {
                 // Read objects
-                nobj = (Objetos) oi.readObject();
-                System.out.println(nobj.toString() +"\n");
+                //Objetos nobj = (Objetos) oi.readObject();
+                Objetos.add((Objetos) oi.readObject());
+                System.out.println(Objetos.get(i).toString() +"\n");    i++;
                 //System.out.println("Imprime aqui");
-                if((nobj=(Objetos) oi.readObject())==null) System.out.println("Adios");
+                //if((nobj=(Objetos) oi.readObject())==null) System.out.println("Adios");
             }
 
             oi.close();
@@ -122,10 +126,13 @@ public class WriterReaderObjeto {
         }
     }
 
-    public void LimpiarArchivo(){
-        //try {
-            //FileOutputStream f = new FileOutputStream("objetos.txt");
-        //}
+    public void LimpiarArchivo() throws IOException {
+        String sFichero = "objetos.txt";
+        //File f = new File(sFichero);
+        BufferedWriter bw = new BufferedWriter(new FileWriter(sFichero));
+        bw.write("");
+        bw.close();
+
 
     }
 }

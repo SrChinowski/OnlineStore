@@ -1,8 +1,10 @@
 import dataBase.*;
 
+import java.io.IOException;
+
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         System.out.println("Hello World!");
         System.out.println("Johan es bien zorra");
         //dataBase base = new dataBase();
@@ -15,6 +17,9 @@ public class Main {
 
         //imprime la lista de objetos
        // manejadorObjeto.ImprimirLista();
+
+        //limpiarel archivo
+        //manejadorObjeto.LimpiarArchivo();
 
         //crea un objeto default
         manejadorObjeto.ObjetoDefault();
