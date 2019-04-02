@@ -46,7 +46,7 @@ public class WriterReaderUsuario {
 
     }
 
-    public void PedirDatosUsuario(){
+    public void UsuarioDefault(){
         String name = "Artio";
         String email = "email@email";
         String password = "ppp";
