@@ -1,69 +1,51 @@
-package dataBase;
-
 import java.io.Serializable;
 
-public class Usuario implements Serializable {
-    private static final long serialVersionUID = 1L;
-    private String name;
-    private String password;
-    private String email;
-    private String creditCard;
-    private String PIN;
+public class Usuario implements Serializable{
+	
 
-    Usuario(String name, String email, String password, String creditCard) {
-        this.name = name;
-        this.email = email;
-        this.password = password;
-        this.creditCard = creditCard;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getCreditCard() {
-        return creditCard;
-    }
-
-    public String getPIN() {
-        return PIN;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setCreditCard(String creditCard) {
-        this.creditCard = creditCard;
-    }
-
-    public void setPIN(String PIN) {
-        this.PIN = PIN;
-    }
-
-    @Override
-    public String toString() {
-        return "Usuario{" +
-                "name='" + name + '\'' +
-                ", password='" + password + '\'' +
-                ", email='" + email + '\'' +
-                ", creditCard='" + creditCard + '\'' +
-                '}';
-    }
+	private static final long serialVersionUID = 1L;
+	private String Nombre; //35
+	private String Correo; //30
+	private int Saldo; //10
+	private String Tarjeta;//10
+	private String Contrasena; //10
+	
+	public Usuario(String nombre,String correo, int saldo,String contrasena, String tar){
+		setNombre(nombre);
+		setCorreo(correo);
+		setSaldo(saldo);
+		setContraseña(contrasena);
+		setTarjeta(tar);
+		}	
+	
+	public String getNombre() {
+		return Nombre;
+	}
+	public void setNombre(String nombre) {
+		Nombre = nombre;
+	}
+	public String getCorreo() {
+		return Correo;
+	}
+	public void setCorreo(String correo) {
+		Correo = correo;
+	}
+	public int getSaldo() {
+		return Saldo;
+	}
+	public void setSaldo(int saldo) {
+		Saldo = saldo;
+	}
+	public String getContrasena() {
+		return Contrasena;
+	}
+	public void setContraseña(String contrasena) {
+		Contrasena = contrasena;
+	}
+	public String getTarjeta() {
+		return Tarjeta;
+	}
+	public void setTarjeta(String tarjeta) {
+		Tarjeta = tarjeta;
+	}
 }

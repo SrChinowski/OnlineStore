@@ -10,7 +10,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 
 
-public class Cuenta implements Serializable{
+public class Productos implements Serializable{
 	
 	public static void main(String[] args) {
 		try {
@@ -58,7 +58,7 @@ public class Cuenta implements Serializable{
 				Archivo.createNewFile();
 				objeto.writeObject(Hash);
 				objeto.close();
-				}catch ()
+				}catch 
 			}
 			else {
 				objeto.writeObject(Hash);
